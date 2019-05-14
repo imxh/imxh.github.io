@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>搭建ss/ssr/v2ray脚本指令 | HoGer&#39;s博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络 首先，你需要购买一个服务器关防火墙123systemctl stop firewalld.service	停止systemctl disable firewalld.service	禁止firewall-cmd --state			状态 安装bbr加速Centos系统1wget --no-">
+  <meta name="description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络 首先，你需要购买一个服务器">
 <meta property="og:type" content="article">
 <meta property="og:title" content="搭建ss&#x2F;ssr&#x2F;v2ray脚本指令">
 <meta property="og:url" content="http://yoursite.com/2019/05/12/科学上网搭建教程/index.html">
 <meta property="og:site_name" content="HoGer&#39;s博客">
-<meta property="og:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络 首先，你需要购买一个服务器关防火墙123systemctl stop firewalld.service	停止systemctl disable firewalld.service	禁止firewall-cmd --state			状态 安装bbr加速Centos系统1wget --no-">
+<meta property="og:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络 首先，你需要购买一个服务器">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-05-11T14:20:03.358Z">
+<meta property="og:updated_time" content="2019-05-14T07:16:01.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建ss&#x2F;ssr&#x2F;v2ray脚本指令">
-<meta name="twitter:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络 首先，你需要购买一个服务器关防火墙123systemctl stop firewalld.service	停止systemctl disable firewalld.service	禁止firewall-cmd --state			状态 安装bbr加速Centos系统1wget --no-">
+<meta name="twitter:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络 首先，你需要购买一个服务器">
   
     <link rel="alternative" href="/atom.xml" title="HoGer&#39;s博客" type="application/atom+xml">
   
@@ -165,7 +165,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络</p>
-<h2 id="首先，你需要购买一个服务器"><a href="#首先，你需要购买一个服务器" class="headerlink" title="首先，你需要购买一个服务器"></a>首先，你需要购买一个服务器</h2><h3 id="关防火墙"><a href="#关防火墙" class="headerlink" title="关防火墙"></a>关防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service	停止</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service	禁止</span><br><span class="line">firewall-cmd --state			状态</span><br></pre></td></tr></table></figure>
+<h2 id="首先，你需要购买一个服务器"><a href="#首先，你需要购买一个服务器" class="headerlink" title="首先，你需要购买一个服务器"></a>首先，你需要购买一个服务器</h2><a id="more"></a>
+<h3 id="关防火墙"><a href="#关防火墙" class="headerlink" title="关防火墙"></a>关防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service	停止</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service	禁止</span><br><span class="line">firewall-cmd --state			状态</span><br></pre></td></tr></table></figure>
 <h3 id="安装bbr加速"><a href="#安装bbr加速" class="headerlink" title="安装bbr加速"></a>安装bbr加速</h3><h4 id="Centos系统"><a href="#Centos系统" class="headerlink" title="Centos系统"></a>Centos系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
 <h4 id="Debain-Ubuntu-14-04-系统"><a href="#Debain-Ubuntu-14-04-系统" class="headerlink" title="Debain/Ubuntu 14.04+系统"></a>Debain/Ubuntu 14.04+系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; bash bbr.sh</span><br></pre></td></tr></table></figure>
 <h4 id="验证是否开启bbr"><a href="#验证是否开启bbr" class="headerlink" title="验证是否开启bbr"></a>验证是否开启bbr</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.core.default_qdisc</span><br></pre></td></tr></table></figure>
