@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>HoGer&#39;s博客</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.imxh.site/"/>
+  <updated>2019-05-14T07:19:49.097Z</updated>
+  <id>https://blog.imxh.site/</id>
+  
+  <author>
+    <name>HoGer</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建ss/ssr/v2ray脚本指令</title>
+    <link href="https://blog.imxh.site/2019/05/12/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/"/>
+    <id>https://blog.imxh.site/2019/05/12/科学上网搭建教程/</id>
+    <published>2019-05-12T10:55:29.720Z</published>
+    <updated>2019-05-14T07:19:49.097Z</updated>
+    
+    <content type="html"><![CDATA[<p>通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络<br><a id="more"></a></p><h2 id="首先，你需要购买一个服务器"><a href="#首先，你需要购买一个服务器" class="headerlink" title="首先，你需要购买一个服务器"></a>首先，你需要购买一个服务器</h2><h3 id="关防火墙"><a href="#关防火墙" class="headerlink" title="关防火墙"></a>关防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service停止</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service禁止</span><br><span class="line">firewall-cmd --state状态</span><br></pre></td></tr></table></figure><h3 id="安装bbr加速"><a href="#安装bbr加速" class="headerlink" title="安装bbr加速"></a>安装bbr加速</h3><h4 id="Centos系统"><a href="#Centos系统" class="headerlink" title="Centos系统"></a>Centos系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure><h4 id="Debain-Ubuntu-14-04-系统"><a href="#Debain-Ubuntu-14-04-系统" class="headerlink" title="Debain/Ubuntu 14.04+系统"></a>Debain/Ubuntu 14.04+系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; bash bbr.sh</span><br></pre></td></tr></table></figure><h4 id="验证是否开启bbr"><a href="#验证是否开启bbr" class="headerlink" title="验证是否开启bbr"></a>验证是否开启bbr</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.core.default_qdisc</span><br></pre></td></tr></table></figure><h4 id="返回值一般为："><a href="#返回值一般为：" class="headerlink" title="返回值一般为："></a>返回值一般为：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.core.default_qdisc = fq</span><br></pre></td></tr></table></figure><h4 id="说明已开启"><a href="#说明已开启" class="headerlink" title="说明已开启"></a>说明已开启</h4><h2 id="搭建脚本（3种）"><a href="#搭建脚本（3种）" class="headerlink" title="搭建脚本（3种）"></a>搭建脚本（3种）</h2><h3 id="1-搭建ss"><a href="#1-搭建ss" class="headerlink" title="1.搭建ss"></a>1.搭建ss</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure><h4 id="卸载方法"><a href="#卸载方法" class="headerlink" title="卸载方法"></a>卸载方法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocks.sh uninstall</span><br></pre></td></tr></table></figure><h4 id="配置文件路径"><a href="#配置文件路径" class="headerlink" title="配置文件路径"></a>配置文件路径</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/shadowsocks.json</span><br></pre></td></tr></table></figure><h4 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks start</span><br></pre></td></tr></table></figure><h4 id="停止："><a href="#停止：" class="headerlink" title="停止："></a>停止：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks stop</span><br></pre></td></tr></table></figure><h4 id="重启："><a href="#重启：" class="headerlink" title="重启："></a>重启：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks restart</span><br></pre></td></tr></table></figure><h4 id="状态："><a href="#状态：" class="headerlink" title="状态："></a>状态：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks status</span><br></pre></td></tr></table></figure><p>来自: <a href="https://teddysun.com" target="_blank" rel="noopener">秋水逸冰</a></p><h3 id="2-搭建ssr"><a href="#2-搭建ssr" class="headerlink" title="2.搭建ssr"></a>2.搭建ssr</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh</span><br></pre></td></tr></table></figure><h4 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ssrmu.sh</span><br></pre></td></tr></table></figure><p>来自：<a href="https://doubibackup.com/" target="_blank" rel="noopener">逗比根据地</a></p><h3 id="3-搭建v2ray"><a href="#3-搭建v2ray" class="headerlink" title="3.搭建v2ray"></a>3.搭建v2ray</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://v2ray66.com/v2ray.sh)</span><br></pre></td></tr></table></figure><h2 id="VPS测试"><a href="#VPS测试" class="headerlink" title="VPS测试"></a>VPS测试</h2><h3 id="测速"><a href="#测速" class="headerlink" title="测速"></a>测速</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br><span class="line">wget -qO- 86.re/bench.sh | bash</span><br></pre></td></tr></table></figure><p>来自: 网络</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://blog.imxh.site/2019/05/12/hello-world/"/>
+    <id>https://blog.imxh.site/2019/05/12/hello-world/</id>
+    <published>2019-05-12T10:33:24.191Z</published>
+    <updated>2019-05-14T07:20:11.593Z</updated>
+    
+    <content type="html"><![CDATA[<p>description: “Welcome to Hexo! This is your very first post.”<br>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info.<br><a id="more"></a><br>If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;description: “Welcome to Hexo! This is your very first post.”&lt;br&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info.&lt;br&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
