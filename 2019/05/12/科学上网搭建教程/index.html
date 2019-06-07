@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>搭建ss/ssr/v2ray脚本指令 | HoGer&#39;s博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="HoGer's Blog">
+  
+  <meta name="description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建ss&#x2F;ssr&#x2F;v2ray脚本指令">
+<meta property="og:url" content="https://blog.imxh.site/2019/05/12/科学上网搭建教程/index.html">
+<meta property="og:site_name" content="HoGer&#39;s博客">
+<meta property="og:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-05-14T07:19:49.097Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建ss&#x2F;ssr&#x2F;v2ray脚本指令">
+<meta name="twitter:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">HoGer&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>主页</span>
+                    </a>
+                    
+                    <a target="_blank" href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>文章</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>关于我</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        HoGer&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        一个专注 study 的技术博客
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="HoGer" target="_blank" href="//imxh.site">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="文章" target="_blank" href="/archives">
+                            <i class="fa fa-archive fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/imxh">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="//twitter.com/imhorif">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-科学上网搭建教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      搭建ss/ssr/v2ray脚本指令
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-05-12
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p>通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络<br><a id="more"></a></p>
+<h2 id="首先，你需要购买一个服务器"><a href="#首先，你需要购买一个服务器" class="headerlink" title="首先，你需要购买一个服务器"></a>首先，你需要购买一个服务器</h2><h3 id="关防火墙"><a href="#关防火墙" class="headerlink" title="关防火墙"></a>关防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service	停止</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service	禁止</span><br><span class="line">firewall-cmd --state			状态</span><br></pre></td></tr></table></figure>
+<h3 id="安装bbr加速"><a href="#安装bbr加速" class="headerlink" title="安装bbr加速"></a>安装bbr加速</h3><h4 id="Centos系统"><a href="#Centos系统" class="headerlink" title="Centos系统"></a>Centos系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
+<h4 id="Debain-Ubuntu-14-04-系统"><a href="#Debain-Ubuntu-14-04-系统" class="headerlink" title="Debain/Ubuntu 14.04+系统"></a>Debain/Ubuntu 14.04+系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; bash bbr.sh</span><br></pre></td></tr></table></figure>
+<h4 id="验证是否开启bbr"><a href="#验证是否开启bbr" class="headerlink" title="验证是否开启bbr"></a>验证是否开启bbr</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sysctl net.core.default_qdisc</span><br></pre></td></tr></table></figure>
+<h4 id="返回值一般为："><a href="#返回值一般为：" class="headerlink" title="返回值一般为："></a>返回值一般为：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net.core.default_qdisc = fq</span><br></pre></td></tr></table></figure>
+<h4 id="说明已开启"><a href="#说明已开启" class="headerlink" title="说明已开启"></a>说明已开启</h4><h2 id="搭建脚本（3种）"><a href="#搭建脚本（3种）" class="headerlink" title="搭建脚本（3种）"></a>搭建脚本（3种）</h2><h3 id="1-搭建ss"><a href="#1-搭建ss" class="headerlink" title="1.搭建ss"></a>1.搭建ss</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&gt;&amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
+<h4 id="卸载方法"><a href="#卸载方法" class="headerlink" title="卸载方法"></a>卸载方法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./shadowsocks.sh uninstall</span><br></pre></td></tr></table></figure>
+<h4 id="配置文件路径"><a href="#配置文件路径" class="headerlink" title="配置文件路径"></a>配置文件路径</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/shadowsocks.json</span><br></pre></td></tr></table></figure>
+<h4 id="启动："><a href="#启动：" class="headerlink" title="启动："></a>启动：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks start</span><br></pre></td></tr></table></figure>
+<h4 id="停止："><a href="#停止：" class="headerlink" title="停止："></a>停止：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks stop</span><br></pre></td></tr></table></figure>
+<h4 id="重启："><a href="#重启：" class="headerlink" title="重启："></a>重启：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks restart</span><br></pre></td></tr></table></figure>
+<h4 id="状态："><a href="#状态：" class="headerlink" title="状态："></a>状态：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/shadowsocks status</span><br></pre></td></tr></table></figure>
+<p>来自: <a href="https://teddysun.com" target="_blank" rel="noopener">秋水逸冰</a></p>
+<h3 id="2-搭建ssr"><a href="#2-搭建ssr" class="headerlink" title="2.搭建ssr"></a>2.搭建ssr</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/ssrmu.sh &amp;&amp; chmod +x ssrmu.sh &amp;&amp; bash ssrmu.sh</span><br></pre></td></tr></table></figure>
+<h4 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash ssrmu.sh</span><br></pre></td></tr></table></figure>
+<p>来自：<a href="https://doubibackup.com/" target="_blank" rel="noopener">逗比根据地</a></p>
+<h3 id="3-搭建v2ray"><a href="#3-搭建v2ray" class="headerlink" title="3.搭建v2ray"></a>3.搭建v2ray</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -s -L https://v2ray66.com/v2ray.sh)</span><br></pre></td></tr></table></figure>
+<h2 id="VPS测试"><a href="#VPS测试" class="headerlink" title="VPS测试"></a>VPS测试</h2><h3 id="测速"><a href="#测速" class="headerlink" title="测速"></a>测速</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br><span class="line">wget -qO- 86.re/bench.sh | bash</span><br></pre></td></tr></table></figure>
+<p>来自: 网络</p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年05月14日 15:19</p>
+        <p>原始链接： <a class="post-url" href="/2019/05/12/科学上网搭建教程/" title="搭建ss/ssr/v2ray脚本指令">https://blog.imxh.site/2019/05/12/科学上网搭建教程/</a></p>
+        <footer>
+            <a href="https://blog.imxh.site">
+                <img src="/images/logo.png" alt="HoGer">
+                HoGer
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/&title=《搭建ss/ssr/v2ray脚本指令》 — HoGer's博客&pic=https://blog.imxh.siteimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/&title=《搭建ss/ssr/v2ray脚本指令》 — HoGer's博客&source=通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.imxh.site/2019/05/12/科学上网搭建教程/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搭建ss/ssr/v2ray脚本指令》 — HoGer's博客&url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/&via=https://blog.imxh.site" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://blog.imxh.site/2019/05/12/科学上网搭建教程/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#首先，你需要购买一个服务器"><span class="post-toc-text">首先，你需要购买一个服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关防火墙"><span class="post-toc-text">关防火墙</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装bbr加速"><span class="post-toc-text">安装bbr加速</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Centos系统"><span class="post-toc-text">Centos系统</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Debain-Ubuntu-14-04-系统"><span class="post-toc-text">Debain/Ubuntu 14.04+系统</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#验证是否开启bbr"><span class="post-toc-text">验证是否开启bbr</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#返回值一般为："><span class="post-toc-text">返回值一般为：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#说明已开启"><span class="post-toc-text">说明已开启</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建脚本（3种）"><span class="post-toc-text">搭建脚本（3种）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-搭建ss"><span class="post-toc-text">1.搭建ss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卸载方法"><span class="post-toc-text">卸载方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置文件路径"><span class="post-toc-text">配置文件路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#启动："><span class="post-toc-text">启动：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#停止："><span class="post-toc-text">停止：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#重启："><span class="post-toc-text">重启：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态："><span class="post-toc-text">状态：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-搭建ssr"><span class="post-toc-text">2.搭建ssr</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#运行脚本"><span class="post-toc-text">运行脚本</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-搭建v2ray"><span class="post-toc-text">3.搭建v2ray</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#VPS测试"><span class="post-toc-text">VPS测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测速"><span class="post-toc-text">测速</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2019/05/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Hello World</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/imxh/imxh.github.io" target="_blank">HoGer</a>
+      &copy; 2019 HoGer<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "https://blog.imxh.site",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            
+        </div>
+        <div id="sidebar-menu-box-tags">
+            
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>主页</span>
+                </a>
+            </li>
+            
+            <li>
+                <a target="_blank" href="/archives">
+                    <i class="fa fa-archive"></i><span>文章</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>关于我</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
