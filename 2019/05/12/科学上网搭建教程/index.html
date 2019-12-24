@@ -1,165 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  
-  <title>搭建ss/ssr/v2ray脚本指令 | HoGer&#39;s博客</title>
+    
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    搭建ss/ssr/v2ray脚本指令 |  HoGer&#39;s博客
+  </title>
   
-    <meta name="keywords" content="HoGer's Blog">
+  <link rel="shortcut icon" href="/favicon.ico">
   
-  <meta name="description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络">
-<meta name="keywords" content="VPS,Linus">
-<meta property="og:type" content="article">
-<meta property="og:title" content="搭建ss&#x2F;ssr&#x2F;v2ray脚本指令">
-<meta property="og:url" content="https://blog.imxh.site/2019/05/12/科学上网搭建教程/index.html">
-<meta property="og:site_name" content="HoGer&#39;s博客">
-<meta property="og:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-07T14:56:53.407Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建ss&#x2F;ssr&#x2F;v2ray脚本指令">
-<meta name="twitter:description" content="通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络">
-  
-  
-    <link rel="icon" href="/favicon.ico">
-  
-  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/pace.min.js"></script>
-  
+  <link rel="stylesheet" href="/css/style.css">  <link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">  <script src="/js/pace.min.js"></script>
 
   
+
   
 
 </head>
+
 </html>
+
 <body>
-  <div id="container">
-      <header id="header">
-    <div id="banner"></div>
-    <div id="header-outer">
-        <div id="header-menu" class="header-menu-pos animated">
-            <div class="header-menu-container">
-                <a href="/" class="left">
-                    <span class="site-title">HoGer&#39;s Blog</span>
-                </a>
-                <nav id="header-menu-nav" class="right">
-                    
-                    <a target="_blank" href="//imxh.site">
-                        <i class="fa fa-Home"></i>
-                        <span>主页</span>
-                    </a>
-                    
-                    <a target="_blank" href="//yun.imxh.site/">
-                        <i class="fa fa-OneYun"></i>
-                        <span>云盘</span>
-                    </a>
-                    
-                    <a target="_blank" href="//blog.imxh.site/game/">
-                        <i class="fa fa-Game"></i>
-                        <span>游戏</span>
-                    </a>
-                    
-                    <a target="_blank" href="//old.imxh.site/">
-                        <i class="fa fa-Old App"></i>
-                        <span>旧版APP</span>
-                    </a>
-                    
-                    <a href="/about">
-                        <i class="fa fa-User"></i>
-                        <span>关于我</span>
-                    </a>
-                    
-                </nav>
-                <a class="mobile-header-menu-button">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </div>
-        <div id="header-row">
-            <div id="logo">
-                <a href="/">
-                    <img src="/images/logo.png" alt="logo">
-                </a>
-            </div>
-            <div class="header-info">
-                <div id="header-title">
-                    
-                    <h2>
-                        HoGer&#39;s Blog
-                    </h2>
-                    
-                </div>
-                <div id="header-description">
-                    
-                    <h3>
-                        一个专注 study 的技术博客
-                    </h3>
-                    
-                </div>
-            </div>
-            <nav class="header-nav">
-                <div class="social">
-                    
-                        <a title="Home" href="/">
-                            <i class="fa fa-home fa-2x"></i></a>
-                    
-                        <a title="Archives" href="/archives">
-                            <i class="fa fa-archive fa-2x"></i></a>
-                    
-                        <a title="Github" target="_blank" href="//github.com/imxh">
-                            <i class="fa fa-github fa-2x"></i></a>
-                    
-                        <a title="Twitter" target="_blank" href="//twitter.com/imhorif">
-                            <i class="fa fa-twitter fa-2x"></i></a>
-                    
-                        <a title="friends" href="/friends">
-                            <i class="fa fa-linkedin fa-2x"></i></a>
-                    
-                </div>
-            </nav>
-        </div>
-    </div>
-</header>
-      <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-科学上网搭建教程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div id="app">
+    <main class="content">
+      <section class="outer">
+  <article id="post-科学上网搭建教程" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 class="post-title" itemprop="name">
-      搭建ss/ssr/v2ray脚本指令
-    </h1>
-    <div class="post-title-bar">
-      <ul>
-          
-              <li>
-                  <i class="fa fa-book"></i>
-                  
-                      <a href="/categories/脚本/">脚本</a>
-                  
-              </li>
-          
-        <li>
-          <i class="fa fa-calendar"></i>  2019-05-12
-        </li>
-        <li>
-          <i class="fa fa-eye"></i>
-          <span id="busuanzi_value_page_pv"></span>
-        </li>
-      </ul>
-    </div>
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  搭建ss/ssr/v2ray脚本指令
+</h1>
   
 
-          
-      </header>
+    </header>
     
-    <div class="article-entry post-content" itemprop="articleBody">
+
+    
+    <div class="article-meta">
+      <a href="/2019/05/12/科学上网搭建教程/" class="article-date">
+  <time datetime="2019-05-11T16:00:00.000Z" itemprop="datePublished">2019-05-12</time>
+</a>
       
-            
-            <p>通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络<br><a id="more"></a></p>
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/脚本/">脚本</a>
+  </div>
+
+    </div>
+    
+
+    
+    
+    <div class="tocbot"></div>
+
+
+
+
+
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+
+
+      
+
+      
+      <p>通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络<br><a id="more"></a></p>
 <h2 id="首先，你需要购买一个服务器"><a href="#首先，你需要购买一个服务器" class="headerlink" title="首先，你需要购买一个服务器"></a>首先，你需要购买一个服务器</h2><h3 id="关防火墙"><a href="#关防火墙" class="headerlink" title="关防火墙"></a>关防火墙</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld.service	停止</span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service	禁止</span><br><span class="line">firewall-cmd --state			状态</span><br></pre></td></tr></table></figure>
 <h3 id="安装bbr加速"><a href="#安装bbr加速" class="headerlink" title="安装bbr加速"></a>安装bbr加速</h3><h4 id="Centos系统"><a href="#Centos系统" class="headerlink" title="Centos系统"></a>Centos系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh</span><br></pre></td></tr></table></figure>
 <h4 id="Debain-Ubuntu-14-04-系统"><a href="#Debain-Ubuntu-14-04-系统" class="headerlink" title="Debain/Ubuntu 14.04+系统"></a>Debain/Ubuntu 14.04+系统</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; bash bbr.sh</span><br></pre></td></tr></table></figure>
@@ -180,302 +90,267 @@
 <h2 id="VPS测试"><a href="#VPS测试" class="headerlink" title="VPS测试"></a>VPS测试</h2><h3 id="测速"><a href="#测速" class="headerlink" title="测速"></a>测速</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -qO- bench.sh | bash</span><br><span class="line">wget -qO- 86.re/bench.sh | bash</span><br></pre></td></tr></table></figure>
 <p>来自: 网络</p>
 
-            <div class="post-copyright">
-    <div class="content">
-        <p>最后更新： 2019年06月07日 22:56</p>
-        <p>原始链接： <a class="post-url" href="/2019/05/12/科学上网搭建教程/" title="搭建ss/ssr/v2ray脚本指令">https://blog.imxh.site/2019/05/12/科学上网搭建教程/</a></p>
-        <footer>
-            <a href="https://blog.imxh.site">
-                <img src="/images/logo.png" alt="HoGer">
-                HoGer
-            </a>
-        </footer>
-    </div>
-</div>
-
       
-        
-            
-<div class="page-reward">
-    <a id="rewardBtn" href="javascript:;">赏</a>
-</div>
-
-<div id="reward" class="post-modal reward-lay">
-    <a class="close" href="javascript:;" id="reward-close">×</a>
-    <span class="reward-title">
-        <i class="icon icon-quote-left"></i>
-        请我吃糖~
-        <i class="icon icon-quote-right"></i>
-    </span>
-    <div class="reward-content">
-        
-        <div class="reward-code">
-            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+      <!-- 打赏 -->
+      
+        <div id="reward-btn">
+          打赏
         </div>
-        <div class="reward-select">
-            
-            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
-                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
-            </label>
-            
-            
-            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
-                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
-            </label>
-            
-        </div>
-    </div>
-</div>
-
-
         
     </div>
     <footer class="article-footer">
-        
-        
-<div class="post-share">
-    <a href="javascript:;" id="share-sub" class="post-share-fab">
-        <i class="fa fa-share-alt"></i>
-    </a>
-    <div class="post-share-list" id="share-list">
-        <ul class="share-icons">
-          <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/&title=《搭建ss/ssr/v2ray脚本指令》 — HoGer's博客&pic=/images/banner.jpg" data-title="微博">
-              <i class="fa fa-weibo"></i>
-            </a>
-          </li>
-          <li>
-            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
-              <i class="fa fa-weixin"></i>
-            </a>
-          </li>
-          <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/&title=《搭建ss/ssr/v2ray脚本指令》 — HoGer's博客&source=通过下面简单的操作，再配合相应的软件，即可体验科学上网的快感。提醒：下文所用到到脚本并非本人创的，来源于网络" data-title="QQ">
-              <i class="fa fa-qq"></i>
-            </a>
-          </li>
-          <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.imxh.site/2019/05/12/科学上网搭建教程/" data-title="Facebook">
-              <i class="fa fa-facebook"></i>
-            </a>
-          </li>
-          <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《搭建ss/ssr/v2ray脚本指令》 — HoGer's博客&url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/&via=https://blog.imxh.site" data-title="Twitter">
-              <i class="fa fa-twitter"></i>
-            </a>
-          </li>
-          <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://blog.imxh.site/2019/05/12/科学上网搭建教程/" data-title="Google+">
-              <i class="fa fa-google-plus"></i>
-            </a>
-          </li>
-        </ul>
-     </div>
-</div>
-<div class="post-modal wx-share" id="wxShare">
-    <a class="close" href="javascript:;" id="wxShare-close">×</a>
-    <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://blog.imxh.site/2019/05/12/科学上网搭建教程/" alt="微信分享二维码">
-</div>
-
-<div class="mask"></div>
-
-        
-        <ul class="article-footer-menu">
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
+      <a data-url="https://blog.imxh.site/2019/05/12/科学上网搭建教程/" data-id="ck4jfquhf000268vylktfre4v" class="article-share-link">分享</a>
       
-    <a href="/tags/VPS/" class="color4">VPS</a>
-      
-    <a href="/tags/Linus/" class="color1">Linus</a>
-      
-  </li>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linus/">Linus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VPS/">VPS</a></li></ul>
 
-        </ul>
-        
     </footer>
+
   </div>
-</article>
 
-
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#首先，你需要购买一个服务器"><span class="post-toc-text">首先，你需要购买一个服务器</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关防火墙"><span class="post-toc-text">关防火墙</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装bbr加速"><span class="post-toc-text">安装bbr加速</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Centos系统"><span class="post-toc-text">Centos系统</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Debain-Ubuntu-14-04-系统"><span class="post-toc-text">Debain/Ubuntu 14.04+系统</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#验证是否开启bbr"><span class="post-toc-text">验证是否开启bbr</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#返回值一般为："><span class="post-toc-text">返回值一般为：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#说明已开启"><span class="post-toc-text">说明已开启</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搭建脚本（3种）"><span class="post-toc-text">搭建脚本（3种）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-搭建ss"><span class="post-toc-text">1.搭建ss</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卸载方法"><span class="post-toc-text">卸载方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置文件路径"><span class="post-toc-text">配置文件路径</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#启动："><span class="post-toc-text">启动：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#停止："><span class="post-toc-text">停止：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#重启："><span class="post-toc-text">重启：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态："><span class="post-toc-text">状态：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-搭建ssr"><span class="post-toc-text">2.搭建ssr</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#运行脚本"><span class="post-toc-text">运行脚本</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-搭建v2ray"><span class="post-toc-text">3.搭建v2ray</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#VPS测试"><span class="post-toc-text">VPS测试</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测速"><span class="post-toc-text">测速</span></a></li></ol></li></ol>
-        </nav>
-    </aside>
+  
+  
+  <nav class="article-nav">
     
-
-<nav id="article-nav">
-  
-    <a href="/2019/06/07/My first blog/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          My first blog
-        
-      </span>
-    </a>
-  
-  
-</nav>
-
-
-
+      <a href="/2019/06/07/My first blog/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            My first blog
+          
+        </div>
+      </a>
     
-</section>
-        
-      </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-<p>
-    <span id="busuanzi_container_site_uv" style="display:none">
-        总访客数：<span id="busuanzi_value_site_uv"></span>
-    </span>
-    <span id="busuanzi_container_site_pv" style="display:none">
-        总访问量：<span id="busuanzi_value_site_pv"></span>
-    </span>
-</p>
+    
+  </nav>
 
 
-      <p>
-        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
-        Theme <a href="//github.com/imxh/imxh.github.io" target="_blank">HoGer</a>
-      &copy; 2019 HoGer<br>
-      </p>
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
     </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        notify: false,
+        verify: false,
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul class="list-inline">
+      <li>
+        &copy;
+        2015-2019
+        HoGer
+      </li>
+      <li>
+        
+        
+        
+        <a href="https://hexo.io" target="_blank">Hexo</a> Theme <a href="https://github.com/Shen-Yu/hexo-theme-ayer" target="_blank">Ayer</a> by shenyu
+        
+      </li>
+    </ul>
+    <ul class="list-inline">
+      <li>
+        
+        
+        <ul class="list-inline">
+  <li>PV:<span id="busuanzi_value_page_pv"></span></li>
+  <li>UV:<span id="busuanzi_value_site_uv"></span></li>
+</ul>
+        
+      </li>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src="https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914"></script>
+        
+      </li>
+    </ul>
   </div>
 </footer>
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  var mihoConfig = {
-      root: "https://blog.imxh.site",
-      animate: true,
-      isHome: false,
-      share: true,
-      reward: 1
-  }
-</script>
-<div class="sidebar">
-    <div id="sidebar-search" title="Search">
-        <i class="fa fa-search"></i>
-    </div>
-    <div id="sidebar-category" title="Categories">
-        <i class="fa fa-book"></i>
-    </div>
-    <div id="sidebar-tag" title="Tags">
-        <i class="fa fa-tags"></i>
-    </div>
-    <div id="sidebar-top">
-        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
-    </div>
+    <div class="to_top">
+        <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
 </div>
-<div class="sidebar-menu-box" id="sidebar-menu-box">
-    <div class="sidebar-menu-box-container">
-        <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/hexo/">hexo</a><a class="category-link" href="/categories/脚本/">脚本</a>
-        </div>
-        <div id="sidebar-menu-box-tags">
-            <a href="/tags/Linus/" style="font-size: 10px;">Linus</a> <a href="/tags/VPS/" style="font-size: 10px;">VPS</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
-        </div>
-    </div>
-    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
-</div>
-<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
-    <div class="mobile-header-menu-container">
-        <span class="title">Menus</span>
-        <ul class="mobile-header-menu-navbar">
-            
-            <li>
-                <a target="_blank" href="//imxh.site">
-                    <i class="fa fa-Home"></i><span>主页</span>
-                </a>
-            </li>
-            
-            <li>
-                <a target="_blank" href="//yun.imxh.site/">
-                    <i class="fa fa-OneYun"></i><span>云盘</span>
-                </a>
-            </li>
-            
-            <li>
-                <a target="_blank" href="//blog.imxh.site/game/">
-                    <i class="fa fa-Game"></i><span>游戏</span>
-                </a>
-            </li>
-            
-            <li>
-                <a target="_blank" href="//old.imxh.site/">
-                    <i class="fa fa-Old App"></i><span>旧版APP</span>
-                </a>
-            </li>
-            
-            <li>
-                <a href="/about">
-                    <i class="fa fa-User"></i><span>关于我</span>
-                </a>
-            </li>
-            
-        </ul>
-    </div>
-    <div class="mobile-header-tag-container">
-        <span class="title">Tags</span>
-        <div id="mobile-header-container-tags">
-            <a href="/tags/Linus/" style="font-size: 10px;">Linus</a> <a href="/tags/VPS/" style="font-size: 10px;">VPS</a> <a href="/tags/blog/" style="font-size: 10px;">blog</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
-        </div>
-    </div>
-</div>
-<div class="search-wrap">
-    <span class="search-close">&times;</span>
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-            <i class="icon icon-lg icon-chevron-left"></i>
-        </a>
-        <input class="search-field" placeholder="Search..." id="keywords">
-        <a id="search-submit" href="javascript:;">
-            <i class="fa fa-search"></i>
-        </a>
-    <div class="search-container" id="search-container">
-        <ul class="search-result" id="search-result">
-        </ul>
-    </div>
-</div>
-
-<div id="search-tpl">
-    <li class="search-result-item">
-        <a href="{url}" class="search-item-li">
-            <span class="search-item-li-title" title="{title}">{title}</span>
-        </a>
+      </div>
+    </main>
+    
+    <aside class="sidebar">
+      
+        <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="HoGer&#39;s博客"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
     </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">目录</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/旅行/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
 </div>
-<script src="/js/search.js"></script>
-<script src="/js/main.js"></script>
+</div>
+      </aside>
+      <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+      <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/lazyload.min.js"></script>
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+  <script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
-  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
-  <div id="particles"></div>
-  <script src="/js/particles.js"></script>
 
-
-
-
-
-
-
-  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
-  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
-  <script src="/js/animate.js"></script>
-
-
-  <script src="/js/pop-img.js"></script>
+  <script src="/js/tocbot.min.js"></script>
   <script>
-     $(".article-entry p img").popImg();
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
   </script>
 
+
+<script>
+  var ayerConfig = {
+    mathjax: false
+  }
+</script>
+
+<script src="/js/ayer.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css">
+
+
+
+<script type="text/javascript" src="https://js.users.51.la/20544303.js"></script>
+  
+  
   </div>
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+
 </html>
