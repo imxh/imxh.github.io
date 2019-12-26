@@ -5,10 +5,10 @@
     <url>/2019/06/07/My%20first%20blog/</url>
     <content><![CDATA[<p>本站是基于hexo+github搭建的一个独立博客，作为一个新手，对这些虽然了解不多，但却是感兴趣，希望自己能坚持下去，下面写一下我整理的所有东西。<br><a id="more"></a></p>
 <h3 id="IOS软件网站"><a href="#IOS软件网站" class="headerlink" title="IOS软件网站"></a>IOS软件网站</h3><p>这个网站属于静态网站，相对于博客来说入手比较容易，我也是整理了好久，虽说这个模板不是我的（以我的水平也做不了），但照着操作就行。未来学的多了，可能会改变。</p>
-<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>目前网站上的主要内容以软件为主，例如比较常用的旧版软件，也会放一些下架软件，付费软件等。<br><a href="https://old.imxh.site/" target="_blank" rel="noopener">地址</a></p>
+<h4 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h4><p>目前网站上的主要内容以软件为主，例如比较常用的旧版软件，也会放一些下架软件，付费软件等。<br><a href="https://imhor-old.netlify.com/" target="_blank" rel="noopener">地址</a></p>
 <h3 id="私人云盘"><a href="#私人云盘" class="headerlink" title="私人云盘"></a>私人云盘</h3><p>由于上面的软件安装包需要一个下载地址，我就把它存放在自己的OneDrive网盘里，其中用到了IBM Cloud Lite，这个属于免费的（速度不快），也可以用自己的VPS进行搭建，里面不单单放iOS软件安装包，也会放电脑软件，图片，视频等。</p>
-<h4 id="地址（未来可能会换）"><a href="#地址（未来可能会换）" class="headerlink" title="地址（未来可能会换）"></a>地址（未来可能会换）</h4><p><a href="https://yun.imxh.site/" target="_blank" rel="noopener">网盘地址</a></p>
-<h3 id="网页音乐减压小游戏"><a href="#网页音乐减压小游戏" class="headerlink" title="网页音乐减压小游戏"></a>网页音乐减压小游戏</h3><p>这个是网上找的，个人比较喜欢，就单独把它整理出来，单独开了一个<br><a href="https://blog.imxh.site/game/">地址</a></p>
+<h4 id="地址（未来可能会换）"><a href="#地址（未来可能会换）" class="headerlink" title="地址（未来可能会换）"></a>地址（未来可能会换）</h4><p><a href="https://yun.imhor.workers.dev/" target="_blank" rel="noopener">网盘地址</a></p>
+<h3 id="网页音乐减压小游戏"><a href="#网页音乐减压小游戏" class="headerlink" title="网页音乐减压小游戏"></a>网页音乐减压小游戏</h3><p>这个是网上找的，个人比较喜欢，就单独把它整理出来，单独开了一个<br><a href="https://imxh.github.io/game/" target="_blank" rel="noopener">地址</a></p>
 <p>结束</p>
 ]]></content>
       <categories>
